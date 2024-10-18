@@ -1,0 +1,33 @@
+⭐VERSION CONTROL SYSTEM:--
+-------------------------
+➜Remote git platforms: GitHub , Gitlab
+➜Local platforms: bit bucket, svn
+➜repository-directory-contains the project files-track the changes
+➜readme-A document which contains the instructions for developers.
+➜Git bash is the git client used to connect to the repository.
+
+★SSH Auth key
+➜ssh-keygen -t ed25519 -C "mail.com"
+This command will generate a key in some particular location in the laptop.
+Go to that file and copy the key.
+git hub:
+Settings-SSH and GPG keys-New key-give title-copy the key -add key
+➜git status
+➜git clone <ssh key - ex:git@github.com:Nageswaripullepu/Repo1.git>
+➜ls -l(displays the repositories)
+➜cd <repo name>
+➜ls -la(to check whether .git file is available or not).
+------------------------------------------------------------------------
+Working directory        staging area       repository      repository |
+         git add ➜             git commit ➜        git push ➜        |
+                <---git reset                   <--🞆git pull            |
+------------------------------------------------------------------------
+pushing the file into repository:----
+--------------------------------
+vim <file name>/cat
+git add file name
+git status
+git commit -m "any message" readme(for single file)
+git commit -m "message" .(for multiple files)
+git log
+git push
