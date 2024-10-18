@@ -1,0 +1,109 @@
+First protocol-NetBIOS used by the Microsoft.
+globalisation of protocols-protocol suite-transmission  control protocol(tcp)/internet protocol(ip)
+services.msc -to see the services in the computer.
+netstat-shows the Ip's of active connections.
+★tcp/ip protocol model (4 layers)
+application layer 
+      ↓
+transport layer 
+      ↓
+internet layer 
+      ↓
+network layer
+ 
+★open system interconnection(OSI) model(7 layers)
+7.application-data
+       ↓
+6.presentation-data 
+       ↓
+5.session-data -data
+       ↓
+4.transport-segments
+       ↓
+3.network layer -packet(Ip address added to the segment)
+       ↓
+2.data link-frame(MAC address/physical address will be added)
+       ↓
+1.physical-bits(signal encoding)
+
+
+
+
+Physical layer: wired and wireless
+ethernet port/ rj(reserved jack)-45 port
+serial port-rs 232
+Cables: they passes the  electrical signals  in the form of 0 and 1
+types:
+	UTP-unshielded twisted pair(it doesn't have layer protection)
+	STP-shielded twisted pair.(it has the double layer protection)
+
+Any cable has 4 pairs of wires(green ,orange ,blue, brown)
+✨color coding:---
+★T568A
+1.w.green 
+2.green
+3.w.orange
+4.blue
+5.w.blue
+6.orange
+7.w.brown
+8.brown
+★T568B 
+1.w.orange  🞆
+2.orange
+3.w.green
+4.blue
+5.w.blue
+6.green
+7.w.brown
+8.brown
+/*1 , 2, 3, 6 are only changing*/
+
+➜Straight cable: A to A or B to B( for different devices)ex: computer connect to the switch
+➜Cross cable: A to B or B to A( for same devices)ex: computer to computer
+
+🞉Hub and end devices are layer1/physical layer device.
+hub is a broad casting device and half duplex device
+
+🞉switch are layer2/datalink layer device
+switch is a unicasting device and full duplex device
+Layer2 contains the mac address.
+
+Fast ethernet- 10/100 mbps
+gigabit ethernet- 1gbps, 2gbps, ....
+
+Icmp(Internet Control Message Protocol)-unicasting
+Arp(address resolution protocol)-broadcasting-It gets the mac address of the destination device.
+★Arp maps the Ip and mac address and vice versa by executing broadcasting.
+★switch creates the mac address table and executes unicasting.
+
+➽Switches are two types:
+	Unmanaged switches(un configurable)
+	Managed switches(configurable) 
+➽Switch has 3 modes:
+	➻user execution mode(>)
+
+To go to privileged execution mode: command-enable
+	➻privileged execution mode(#)
+	To monitor the configuration: command-show ip interface brief
+
+To go to global configure terminal mode: configure terminal
+	➻configure terminal(config #)
+	To change the switch name: command-hostname <switch name>
+        For go to the port: command- interface fastEthernet <port.no>(ex: interface fastEthernet 0/1)
+				     ➻ shutdown(for disable)
+                                     ➻no shutdown(for enable it again)
+        For go to no.of ports within a range: interface range fastEthernet <port range>(ex: interface range fastEthernet 0/1-10)
+➽For setting the password to console:
+	1.line console 0
+	2.password <password name>
+	3.login
+	4.enable password <password name>
+*exit from all the modes-if we want to go to the any mode ,it will ask the password*
+➻To permanently save the configuration:
+	In second mode(#):copy running-config startup-config
+➻To show the running configuration : show running-config
+➻Password encryption: service password-encryption
+
+
+
